@@ -31,6 +31,7 @@ Base tecnica para sistema interno single-tenant do Lari Machado Studio, com aces
 
 - `/` Home
 - `/clientes`
+- `/clientes/novo` (placeholder frontend para cadastro)
 - `/agendamento`
 - `/catalogo`
 - `/financeiro`

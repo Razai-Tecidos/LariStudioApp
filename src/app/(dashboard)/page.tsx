@@ -22,7 +22,7 @@ export default function HomePage() {
         description="Eclesiastes 3:11"
         centered
         showIcon={false}
-        className="mx-auto max-w-[720px] rounded-[2.25rem] border-accent-foreground/5 px-8 py-8 text-primary-foreground md:px-12 md:py-10"
+        className="mx-auto w-full max-w-[720px] rounded-[2rem] border-accent-foreground/5 px-5 py-5 text-primary-foreground md:px-10 md:py-8"
       />
       <SectionDivider />
       <Card className="rounded-3xl border-primary/20 bg-card/85 shadow-none">

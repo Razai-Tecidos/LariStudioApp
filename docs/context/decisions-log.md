@@ -17,3 +17,6 @@
 13. Rotas frontend adicionadas: `/catalogo`, `/financeiro`, `/ajustes`, `/lembretes`.
 14. Rotas antigas mantidas com redirecionamento: `/documentos` -> `/catalogo`, `/configuracoes` -> `/ajustes`.
 15. Tela de clientes (busca e cards) redesenhada do zero mantendo paleta e linguagem visual oficial.
+16. Exclusao de cliente no frontend exige confirmacao em modal antes da remocao da linha na lista.
+17. Tela `Clientes` ganhou CTA no header para adicionar cliente e rota frontend dedicada `/clientes/novo`.
+18. Banner de versiculo da Home foi refinado para mobile com menor padding e microtipografia mais leve.

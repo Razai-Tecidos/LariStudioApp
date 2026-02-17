@@ -23,7 +23,7 @@ export function InfoBanner({
         className,
       )}
     >
-      <div className={cn("flex items-start gap-3", centered && "justify-center text-center")}>
+      <div className={cn("flex items-start gap-3", centered && "items-center justify-center text-center")}>
         {showIcon ? <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" /> : null}
         <div>
           <p
@@ -35,7 +35,7 @@ export function InfoBanner({
             {title}
           </p>
           {description ? (
-            <p className={cn("text-sm opacity-80", centered && "mt-2 text-base md:text-lg")}>
+            <p className={cn("text-sm opacity-80", centered && "mt-1.5 text-sm md:mt-2 md:text-base")}>
               {description}
             </p>
           ) : null}

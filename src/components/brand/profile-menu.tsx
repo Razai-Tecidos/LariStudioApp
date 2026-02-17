@@ -13,8 +13,10 @@ export function ProfileMenu() {
 
   return (
     <details className="group relative">
-      <summary className="list-none cursor-pointer rounded-full border border-primary/60 p-2 text-primary transition-colors hover:bg-primary/10 [&::-webkit-details-marker]:hidden">
-        <CircleUserRound className="h-10 w-10" />
+      <summary className="size-10 list-none cursor-pointer rounded-full border border-primary/60 text-primary transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 [&::-webkit-details-marker]:hidden">
+        <span className="flex h-full w-full items-center justify-center">
+          <CircleUserRound className="h-6 w-6" />
+        </span>
       </summary>
       <div className="absolute right-0 z-20 mt-2 min-w-32 rounded-2xl border border-primary/20 bg-card p-2 shadow-sm">
         <form action={logout}>

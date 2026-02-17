@@ -32,9 +32,9 @@ Projeto base para gestao interna do estudio, construido com Next.js, TypeScript,
 
 Barra inferior fixa:
 
-- `Inicio` (item central destacado)
-- `Clientes`
 - `Agenda`
+- `Clientes`
+- `Inicio` (item central destacado)
 - `Catalogo`
 - `Mais` (dropdown com `Financeiro`, `Ajustes`, `Lembretes`)
 
@@ -42,6 +42,7 @@ Rotas frontend existentes:
 
 - `/`
 - `/clientes`
+- `/clientes/novo`
 - `/agendamento`
 - `/catalogo`
 - `/financeiro`
