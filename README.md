@@ -28,6 +28,14 @@ Projeto base para gestao interna do estudio, construido com Next.js, TypeScript,
 - `npx pnpm@latest test`
 - `npx pnpm@latest build`
 
+## Estado Atual do Frontend
+
+- Dashboard autenticado com header padrao, profile menu e bottom nav fixa.
+- Home com slider manual de versiculos e card de "Proxima cliente".
+- Card de "Proxima cliente" com horario, tag de atraso automatica, score e confirmacao para iniciar/desistencia.
+- Tela de clientes com busca refinada, CTA de adicionar cliente e modal de exclusao.
+- Detalhes de cliente em `/clientes/[id]` com edicao local (mock), anamnese, metricas e historico.
+
 ## Navegacao Atual (Dashboard)
 
 Barra inferior fixa:
@@ -43,6 +51,7 @@ Rotas frontend existentes:
 - `/`
 - `/clientes`
 - `/clientes/novo`
+- `/clientes/[id]`
 - `/agendamento`
 - `/catalogo`
 - `/financeiro`

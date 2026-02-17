@@ -8,7 +8,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type ConfirmDeleteDialogProps = {
@@ -26,21 +25,16 @@ export function ConfirmDeleteDialog({
 }: ConfirmDeleteDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-[28rem] rounded-3xl border-primary/15 bg-card p-6 shadow-[0_14px_36px_rgba(59,86,77,0.18)]">
-        <DialogHeader className="space-y-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-secondary text-primary">
-            <AlertCircle className="h-5 w-5" />
-          </div>
-          <DialogTitle className="font-serif-display text-3xl leading-[1.05] text-primary">
-            Excluir cliente?
-          </DialogTitle>
-          <DialogDescription className="text-base leading-relaxed text-primary/80">
+      <DialogContent className="rounded-3xl border-primary/15 bg-card p-6 shadow-[0_12px_34px_rgba(59,86,77,0.18)]">
+        <DialogHeader className="space-y-2">
+          <DialogTitle className="text-2xl text-primary">Excluir cliente?</DialogTitle>
+          <DialogDescription className="text-sm leading-relaxed text-primary/75">
             {clientName
               ? `Tem certeza de que deseja excluir ${clientName}? Essa acao nao pode ser desfeita.`
               : "Tem certeza de que deseja excluir este registro? Essa acao nao pode ser desfeita."}
           </DialogDescription>
         </DialogHeader>
-        <DialogFooter className="mt-2 gap-2 sm:justify-end">
+        <DialogFooter className="gap-2 sm:justify-end">
           <Button
             type="button"
             variant="outline"
@@ -51,14 +45,13 @@ export function ConfirmDeleteDialog({
           </Button>
           <Button
             type="button"
-            variant="destructive"
-            className="rounded-2xl shadow-[0_8px_20px_rgba(211,93,93,0.28)]"
+            className="rounded-2xl border border-red-300/80 bg-red-50/55 text-red-700 hover:bg-red-100/70"
             onClick={() => {
               onConfirm();
               onOpenChange(false);
             }}
           >
-            Sim, excluir
+            Excluir
           </Button>
         </DialogFooter>
       </DialogContent>

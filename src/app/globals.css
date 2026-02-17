@@ -75,3 +75,241 @@
     font-family: var(--font-serif-display);
   }
 }
+
+@keyframes lari-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes lari-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lari-nature-breathe {
+  0% {
+    box-shadow:
+      0 10px 24px rgba(59, 86, 77, 0.35),
+      inset 0 0 0 1px rgba(240, 246, 236, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 12px 28px rgba(59, 86, 77, 0.44),
+      inset 0 0 0 1px rgba(240, 246, 236, 0.2);
+  }
+  100% {
+    box-shadow:
+      0 10px 24px rgba(59, 86, 77, 0.35),
+      inset 0 0 0 1px rgba(240, 246, 236, 0.12);
+  }
+}
+
+@keyframes lari-nature-shift {
+  0% {
+    background-position:
+      0% 40%,
+      0% 50%;
+  }
+  50% {
+    background-position:
+      100% 60%,
+      100% 50%;
+  }
+  100% {
+    background-position:
+      0% 40%,
+      0% 50%;
+  }
+}
+
+@keyframes lari-nature-orbit {
+  0% {
+    transform: rotate(0deg) scale(1.02);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.02);
+  }
+}
+
+@keyframes lari-nature-drift {
+  0% {
+    transform: translate3d(-7%, 6%, 0) rotate(-4deg);
+  }
+  50% {
+    transform: translate3d(8%, -7%, 0) rotate(5deg);
+  }
+  100% {
+    transform: translate3d(-7%, 6%, 0) rotate(-4deg);
+  }
+}
+
+@keyframes lari-nature-sweep {
+  0% {
+    transform: translateX(-72%) skewX(-18deg);
+    opacity: 0.18;
+  }
+  45% {
+    opacity: 0.38;
+  }
+  100% {
+    transform: translateX(86%) skewX(-18deg);
+    opacity: 0.16;
+  }
+}
+
+@keyframes lari-nature-dapple {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  50% {
+    background-position:
+      28px -22px,
+      -26px 24px;
+  }
+  100% {
+    background-position:
+      0 0,
+      0 0;
+  }
+}
+
+@layer utilities {
+  .motion-page {
+    animation: lari-fade-in 260ms ease-out both;
+  }
+
+  .motion-enter {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+    animation: lari-fade-up 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .motion-delay-1 {
+    animation-delay: 70ms;
+  }
+
+  .motion-delay-2 {
+    animation-delay: 130ms;
+  }
+
+  .motion-delay-3 {
+    animation-delay: 190ms;
+  }
+
+  .motion-stagger > * {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+    animation: lari-fade-up 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .motion-stagger > *:nth-child(1) {
+    animation-delay: 40ms;
+  }
+
+  .motion-stagger > *:nth-child(2) {
+    animation-delay: 110ms;
+  }
+
+  .motion-stagger > *:nth-child(3) {
+    animation-delay: 180ms;
+  }
+
+  .motion-stagger > *:nth-child(4) {
+    animation-delay: 250ms;
+  }
+
+  .motion-stagger > *:nth-child(5) {
+    animation-delay: 320ms;
+  }
+
+  .motion-stagger > *:nth-child(6) {
+    animation-delay: 390ms;
+  }
+
+  .nav-home-organic {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #17342b;
+    background-image: linear-gradient(150deg, #11281f 0%, #2c483f 52%, #0f241b 100%);
+    background-size:
+      210% 210%,
+      100% 100%;
+    background-position:
+      0% 40%,
+      0% 50%;
+    animation: lari-nature-breathe 4.2s ease-in-out infinite;
+    animation-name: lari-nature-breathe, lari-nature-shift;
+    animation-duration: 4.2s, 4.2s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+  }
+
+  .nav-home-organic::before,
+  .nav-home-organic::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .nav-home-organic::before {
+    inset: -44% -24%;
+    background: linear-gradient(
+      116deg,
+      rgba(224, 236, 216, 0) 28%,
+      rgba(210, 229, 202, 0.32) 49%,
+      rgba(224, 236, 216, 0) 68%
+    );
+    filter: blur(2px);
+    mix-blend-mode: screen;
+    animation: lari-nature-sweep 7.2s cubic-bezier(0.32, 0, 0.18, 1) infinite;
+  }
+
+  .nav-home-organic::after {
+    background:
+      radial-gradient(1.2px 1.2px at 16px 14px, rgba(219, 235, 211, 0.24), transparent 72%),
+      radial-gradient(1.2px 1.2px at 34px 30px, rgba(152, 182, 167, 0.2), transparent 72%);
+    background-size:
+      44px 44px,
+      52px 52px;
+    opacity: 0.58;
+    animation: lari-nature-dapple 6.4s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-page,
+  .motion-enter,
+  .motion-stagger > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .nav-home-organic::before,
+  .nav-home-organic::after {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .nav-home-organic {
+    animation: none !important;
+    background-position: 50% 50% !important;
+  }
+}

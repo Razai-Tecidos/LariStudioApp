@@ -26,7 +26,7 @@ export default async function DashboardLayout({ children }: DashboardLayoutProps
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="mx-auto min-h-screen w-full max-w-3xl px-6 pt-8 pb-[calc(8.75rem+env(safe-area-inset-bottom))] md:px-10 md:pb-[calc(9.5rem+env(safe-area-inset-bottom))]">
+      <div className="motion-page mx-auto min-h-screen w-full max-w-3xl px-6 pt-8 pb-[calc(8.75rem+env(safe-area-inset-bottom))] md:px-10 md:pb-[calc(9.5rem+env(safe-area-inset-bottom))]">
         {children}
       </div>
       <BottomNav />

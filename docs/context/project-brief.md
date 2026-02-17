@@ -12,5 +12,7 @@ Centralizar a operacao interna do estudio com uma base segura, escalavel e facil
 
 - Fundacao tecnica completa.
 - Acesso exclusivo da dona.
-- Base de clientes com modelo e politicas de seguranca.
+- Base visual do dashboard com navegacao inferior e modulos placeholder.
+- Base de clientes com lista, busca, exclusao com confirmacao e pagina de detalhes.
+- Home com slider de versiculos e card de proxima cliente (mock local).
 - Sem valores internos pre-populados.

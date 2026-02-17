@@ -1,58 +1,52 @@
-import { InfoBanner } from "@/components/brand/info-banner";
+import { InfoBannerSlider } from "@/components/brand/info-banner-slider";
+import { NextClientCard } from "@/components/brand/next-client-card";
 import { MAIN_HEADER_TITLE_CLASS, PageHeader } from "@/components/brand/page-header";
 import { ProfileMenu } from "@/components/brand/profile-menu";
 import { SectionDivider } from "@/components/brand/section-divider";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getGreetingForTimeZone } from "@/lib/greeting";
 
 export default function HomePage() {
   const greeting = getGreetingForTimeZone("America/Sao_Paulo");
+  const todayInSaoPaulo = new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "America/Sao_Paulo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+  const scheduledAt = `${todayInSaoPaulo}T11:00:00-03:00`;
+  const verseSlides = [
+    {
+      id: "verse-1",
+      title: "Tudo fez formoso no seu devido tempo",
+      description: "Eclesiastes 3:11",
+      className: "border-primary/22 text-primary",
+    },
+    {
+      id: "verse-2",
+      title: "Ha tempo para todo proposito debaixo do ceu",
+      description: "Eclesiastes 3:1",
+      className:
+        "border-[color-mix(in_srgb,var(--destructive)_58%,var(--accent)_42%)] text-[color-mix(in_srgb,var(--destructive)_65%,var(--primary)_35%)]",
+    },
+  ] as const;
 
   return (
-    <main className="space-y-8">
+    <main className="motion-stagger space-y-8">
       <PageHeader
         title={`${greeting}, Lari!`}
         titleClassName={MAIN_HEADER_TITLE_CLASS}
         rowClassName="items-center"
         actions={<ProfileMenu />}
       />
-      <InfoBanner
-        title="Tudo fez formoso no seu devido tempo"
-        description="Eclesiastes 3:11"
-        centered
-        showIcon={false}
-        className="mx-auto w-full max-w-[720px] rounded-[2rem] border-accent-foreground/5 px-5 py-5 text-primary-foreground md:px-10 md:py-8"
-      />
+      <InfoBannerSlider slides={verseSlides} className="mx-auto w-full max-w-[680px]" />
       <SectionDivider />
-      <Card className="rounded-3xl border-primary/20 bg-card/85 shadow-none">
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl text-primary">Proxima cliente</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4 text-primary">
-          <div className="grid grid-cols-1 gap-3 text-sm md:grid-cols-2">
-            <p>
-              <span className="block text-muted-foreground">Nome</span>
-              Vanessa Andrade
-            </p>
-            <p>
-              <span className="block text-muted-foreground">Telefone</span>
-              (11) 9 9999-9999
-            </p>
-            <p>
-              <span className="block text-muted-foreground">Idade</span>
-              34 anos
-            </p>
-            <p>
-              <span className="block text-muted-foreground">Servico</span>
-              Ajuste e acabamento de vestido
-            </p>
-          </div>
-          <Button className="h-11 rounded-2xl bg-primary px-6 text-primary-foreground hover:bg-primary/90">
-            Iniciar atendimento
-          </Button>
-        </CardContent>
-      </Card>
+      <NextClientCard
+        name="Vanessa Andrade"
+        phone="(11) 9 9999-9999"
+        age="34 anos"
+        service="Ajuste e acabamento de vestido"
+        scheduledAt={scheduledAt}
+      />
     </main>
   );
 }

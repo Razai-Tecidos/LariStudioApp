@@ -26,12 +26,17 @@ Base tecnica para sistema interno single-tenant do Lari Machado Studio, com aces
 - Barra inferior fixa com safe-area para evitar sobreposicao de conteudo.
 - Item central destacado da barra: `Inicio`.
 - Item `Mais` abre dropdown com atalhos de modulos secundarios.
+- Home usa `InfoBannerSlider` (arraste horizontal manual, sem autoplay).
+- Home usa `NextClientCard` com status de atraso em tempo real (frontend/memory).
+- Padrao de modal visual unificado para confirmacoes de acao.
+- Clientes usa fluxo de lista -> detalhe via rota dinamica.
 
 ## Rotas Principais (Atual)
 
 - `/` Home
 - `/clientes`
 - `/clientes/novo` (placeholder frontend para cadastro)
+- `/clientes/[id]` (detalhe da cliente)
 - `/agendamento`
 - `/catalogo`
 - `/financeiro`

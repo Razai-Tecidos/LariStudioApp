@@ -13,6 +13,7 @@
 - `context/decisions-log.md`
 - `context/session-handoff.md`
 - `context/backlog.md`
+- `context/supabase-cadastro-log.md`
 - `adr/0001-stack.md`
 - `adr/0002-supabase-auth-rls.md`
 - `adr/0003-folder-architecture.md`

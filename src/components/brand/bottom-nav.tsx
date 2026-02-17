@@ -128,11 +128,11 @@ export function BottomNav({
                       aria-label={item.label}
                       onClick={() => setMoreOpen(false)}
                       className={cn(
-                        "-mt-8 flex h-16 w-16 items-center justify-center rounded-full border border-primary/30 bg-primary text-primary-foreground shadow-[0_10px_24px_rgba(59,86,77,0.35)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                        "-mt-8 nav-home-organic relative flex h-16 w-16 items-center justify-center rounded-full border border-primary/30 text-primary-foreground shadow-[0_10px_24px_rgba(59,86,77,0.35)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                         active && "ring-2 ring-ring",
                       )}
                     >
-                      <Icon className="h-7 w-7" />
+                      <Icon className="relative z-10 h-7 w-7" />
                     </Link>
                     <span className="mt-1 text-[11px] font-medium text-primary">{item.label}</span>
                   </li>

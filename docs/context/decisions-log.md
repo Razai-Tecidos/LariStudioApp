@@ -18,5 +18,20 @@
 14. Rotas antigas mantidas com redirecionamento: `/documentos` -> `/catalogo`, `/configuracoes` -> `/ajustes`.
 15. Tela de clientes (busca e cards) redesenhada do zero mantendo paleta e linguagem visual oficial.
 16. Exclusao de cliente no frontend exige confirmacao em modal antes da remocao da linha na lista.
-17. Tela `Clientes` ganhou CTA no header para adicionar cliente e rota frontend dedicada `/clientes/novo`.
-18. Banner de versiculo da Home foi refinado para mobile com menor padding e microtipografia mais leve.
+17. CTA `Adicionar cliente` movida para entre busca e lista, em botao full-width.
+18. Banner de versiculo da Home passou para slider manual com arraste horizontal.
+19. Indicadores do slider foram reduzidos e posicionados no canto inferior direito.
+20. Card de "Proxima cliente" passou a incluir horario, score e status de atraso.
+21. Tag `Atrasada` deve aparecer automaticamente sem refresh manual (timer em frontend).
+22. `Iniciar atendimento` e `Desistencia` passaram a exigir modal de confirmacao.
+23. `Desistencia` apos atraso aplica penalidade no score (regra frontend atual).
+24. Atraso contabilizado e exibido apos iniciar/encerrar atendimento (estado local).
+25. Tela de detalhes da cliente adicionada em `/clientes/[id]`.
+26. Clique no card de cliente e acao de editar usam o mesmo destino (`/clientes/[id]`).
+27. Header da tela de detalhes permanece fixo como `Detalhes`; nome fica abaixo do divisor.
+28. Botao `Voltar para clientes` posicionado acima do nome da cliente.
+29. Campos editaveis na tela de detalhes: nome, sobrenome, data de nascimento e WhatsApp.
+30. Ficha de anamnese ganhou botao `Atualizar ficha` e regra de renovacao em 6 meses.
+31. Tag da anamnese: `Renovar` quando vencida; `Em dia` quando dentro do prazo.
+32. Padrao visual de modais unificado para manter consistencia entre telas.
+33. Cadastro futuro no Supabase exige registro obrigatorio em `docs/context/supabase-cadastro-log.md`.
