@@ -35,3 +35,5 @@
 31. Tag da anamnese: `Renovar` quando vencida; `Em dia` quando dentro do prazo.
 32. Padrao visual de modais unificado para manter consistencia entre telas.
 33. Cadastro futuro no Supabase exige registro obrigatorio em `docs/context/supabase-cadastro-log.md`.
+34. Base PWA adicionada com `manifest.webmanifest`, icones e service worker minimo.
+35. Metadata de web app/Apple configurada para experiencia mais proxima de app nativo.

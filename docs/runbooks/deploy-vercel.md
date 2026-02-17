@@ -21,3 +21,12 @@ Configurar no projeto Vercel:
 1. `GET /api/health` retorna `status: ok`.
 2. Rota privada redireciona para `/login` sem sessao.
 3. Login so permite e-mail da dona.
+4. `GET /manifest.webmanifest` responde com `display: standalone`.
+5. `GET /sw.js` responde `200`.
+
+## Validacao de instalacao PWA
+
+1. Android (Chrome): menu `Instalar app`.
+2. iPhone (Safari): `Compartilhar` -> `Adicionar a Tela de Inicio`.
+3. Abrir pelo icone instalado (nao pela aba do navegador).
+4. Confirmar que a interface abre em modo app, sem barra de URL persistente.

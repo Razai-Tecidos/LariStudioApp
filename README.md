@@ -20,6 +20,15 @@ Projeto base para gestao interna do estudio, construido com Next.js, TypeScript,
 3. Instale as dependencias: `npx pnpm@latest install`.
 4. Rode em desenvolvimento: `npx pnpm@latest dev`.
 
+## PWA (Android e iPhone)
+
+1. Publicar no Vercel (HTTPS obrigatorio).
+2. Instalar o app pela opcao do navegador (`Instalar app` no Android ou `Adicionar a Tela de Inicio` no iPhone).
+3. Abrir sempre pelo icone instalado na tela inicial.
+
+Observacao:
+- Se abrir pelo navegador normal (aba), a barra de URL vai aparecer.
+
 ## Scripts
 
 - `npx pnpm@latest dev`
